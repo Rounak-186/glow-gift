@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { type ReactNode } from 'react';
 import clsx from 'clsx';
 import { Tooltip } from 'react-tooltip';
-import { Outlet } from 'react-router-dom';
 
 type ButtonProps = {
+  children: ReactNode
   className?: string,
   variant?: 'primary' | 'secondary' | 'ghost' | "none" | 'nav' | 'destructive' | 'outline' | 'link',
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void,
@@ -13,7 +13,7 @@ type ButtonProps = {
   active?: boolean
 }
 
-export const Button = ({ className, variant = 'primary', onClick, disabled, tooltip, tooltipId, active }: ButtonProps) => {
+export const Button = ({ children, className, variant = 'primary', onClick, disabled, tooltip, tooltipId, active }: ButtonProps) => {
   const variants: Record<string, string> = {
     "primary": "bg-[var(--primary)] text-white",
     "secondary": `bg-transparent text-[var(--foreground)] hover:!bg-[var(--drop)] w-full !rounded-sm ${active ? '!bg-[var(--drop)]' : ''}`,
@@ -27,7 +27,7 @@ export const Button = ({ className, variant = 'primary', onClick, disabled, tool
 
   return (
     <button disabled={disabled} className={clsx('hover:brightness-120 active:brightness-75 disabled:brightness-70 disabled:cursor-not-allowed cursor-pointer transition-all duration-200 rounded-xl', 'flex items-center gap-2  px-4 py-2 border-1 border-transparent', active && '!brightness-75', variants[variant], className)} onClick={onClick} data-tooltip-id={tooltipId || 'tooltip'} data-tooltip-content={tooltip}>
-      <Outlet/>
+      {children}
 
       {/* tooltip  */}
       <Tooltip
