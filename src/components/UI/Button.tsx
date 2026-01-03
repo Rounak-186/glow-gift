@@ -15,7 +15,7 @@ type ButtonProps = {
 
 export const Button = ({ children, className, variant = 'primary', onClick, disabled, tooltip, tooltipId, active }: ButtonProps) => {
   const variants: Record<string, string> = {
-    "primary": "bg-[var(--primary)] text-white",
+    "primary": "bg-[var(--primary)] text-white ",
     "secondary": `bg-transparent text-[var(--foreground)] hover:!bg-[var(--drop)] w-full !rounded-sm ${active ? '!bg-[var(--drop)]' : ''}`,
     "ghost": "bg-transparent border-4 border-[var(--secondary)] text-[var(--foreground)] ",
     "nav": `bg-transparent text-[var(--foreground)] hover:bg-[#77777740] !rounded-full active:bg-[#77777750] !p-1`,

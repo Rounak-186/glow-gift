@@ -1,10 +1,11 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { NavBar } from '../components/UI/NavBar'
 
 export default function Layout() {
     return (
         <div>
-            This is fucking layout!
+            <NavBar />
 
             <Outlet />
         </div>

@@ -2,7 +2,7 @@ import ProductCard from '../components/UI/ProductCard'
 
 export default function Test() {
   return (
-    <div className='w-200'> 
+    <div className='w-100'> 
       <ProductCard />
     </div>
   )
