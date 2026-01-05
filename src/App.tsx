@@ -3,6 +3,7 @@ import './App.css'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Test from './pages/Test'
+import { WishlistPage } from './pages/Wishlist'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route path='/home' element={<Home />} />
           <Route path='/testing' element={<Test />} />
+          <Route path='/wishlist' element={<WishlistPage />} />
         </Route>
       </Routes>
     </>

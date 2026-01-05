@@ -1,11 +1,17 @@
 import { Bell, Gift, Heart, Search, ShoppingCart, User } from "lucide-react";
 import { Button } from "./Button";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const pathname = location.pathname;
+
     return (
-        <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] mb-4 flex items-center gap-5">
+        <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] flex items-center gap-5">
             {/* Logo and Name */}
-            <div className="flex gap-2 justify-center items-center">
+            <div className="flex gap-2 justify-center items-center" onClick={()=>navigate('/home')}>
                 <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] p-2 text-white font-bold w-12 h-12 rounded-md flex justify-center items-center">
                     <Gift />
                 </div>
@@ -37,7 +43,7 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
                     <Bell />
                 </Button>
                 {/* wishlist */}
-                <Button variant="nav">
+                <Button variant="nav" onClick={()=>{navigate('/wishlist')}}>
                     <Heart />
                 </Button>
                 {/* user */}
