@@ -37,10 +37,6 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
             </div>
             {/* other options */}
             <div className="flex items-center justify-center gap-2">
-                {/* notification */}
-                <Button variant="nav">
-                    <Bell />
-                </Button>
                 {/* wishlist */}
                 <Button variant="nav" onClick={()=>{navigate('/wishlist')}}>
                     <Heart />

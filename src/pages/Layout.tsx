@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { NavBar } from '../components/UI/NavBar'
+import { Footer } from '../components/UI/Footer'
 
 export default function Layout() {
 
@@ -28,6 +29,7 @@ export default function Layout() {
             <NavBar navOpts={navOpts} />
 
             <Outlet />
+            <Footer />
         </div>
     )
 }
