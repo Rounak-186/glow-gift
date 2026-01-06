@@ -7,7 +7,7 @@ export const ProductItem = () => {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <div className="border border-[var(--secondary)] rounded-xl p-4 flex items-center gap-4 w-full">
+        <div className="border border-[var(--secondary)] rounded-xl p-4 flex items-center gap-4 w-full shadow-md">
             {/* Product image */}
             <div className="rounded-md overflow-hidden">
                 <img
@@ -16,37 +16,44 @@ export const ProductItem = () => {
             </div>
             {/* other details */}
             <div className="w-full">
-                <div className="flex items-center justify-between p-2 w-full ">
+                <div className="flex items-center justify-between gap-4 p-2 w-full ">
                     {/* title and price */}
                     <div>
                         <h3 className="text-2xl text-left ">Naruto Glass Painting</h3>
                         <p className='line-clamp-2 text-gray-400 text-sm  text-left'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique fugit quae labore nobis perferendis.</p>
                     </div>
-                    <span className='text-[var(--primary)] text-xl font-bold'>{"\u20B9"}399</span>
+                    <span className='text-[var(--primary)] text-lg '>{"\u20B9"}399</span>
                 </div>
 
                 <div className="flex items-center justify-between mt-4">
                     {/* quantity tab */}
-                    <div className="flex justify-center items-center gap-4 rounded-full  border border-[var(--primary)] ">
-                        {/* reduce */}
-                        {quantity <= 1 ? (
-                            <Button variant="outline" className="p-1! rounded-none! !px-3 !border-0 border-r! border-[var(--primary)] py-2! !rounded-l-full" onClick={() => setQuantity(quantity - 1)}>
-                                <Trash size={20} />
-                            </Button>
-                        ) : (
-                            <Button variant="outline" className="p-1! rounded-none! !px-3 !border-0 border-r! border-[var(--primary)] py-2! !rounded-l-full" onClick={() => setQuantity(quantity - 1)}>
-                                <Minus size={20} />
-                            </Button>
-                        )}
+                    <div className="flex gap-3 items-center">
+                        <div className="flex justify-center items-center gap-4 rounded-full  border border-[var(--primary)] ">
+                            {/* reduce */}
+                            {quantity <= 1 ? (
+                                <Button variant="ghost" className=" rounded-none! !px-3  py-2! !rounded-l-full" onClick={() => setQuantity(quantity - 1)}>
+                                    <Trash size={20} />
+                                </Button>
+                            ) : (
+                                <Button variant="ghost" className=" rounded-none! !px-3 py-2! !rounded-l-full" onClick={() => setQuantity(quantity - 1)}>
+                                    <Minus size={20} />
+                                </Button>
+                            )}
 
-                        {/* quantity */}
-                        <div className="text-lg">
-                            {quantity}
+                            {/* quantity */}
+                            <div className="text-lg">
+                                {quantity}
+                            </div>
+                            {/* add */}
+                            <Button variant="ghost" className=" rounded-none! !px-3 py-2! !rounded-r-full" onClick={() => setQuantity(quantity + 1)}>
+                                <Plus size={20} />
+                            </Button>
                         </div>
-                        {/* add */}
-                        <Button variant="outline" className=" rounded-none! !px-3 !border-0 border-l! border-[var(--primary)] py-2! !rounded-r-full" onClick={() => setQuantity(quantity + 1)}>
-                            <Plus size={20} />
-                        </Button>
+                        <div>
+                            <span className="text-xl font-semibold">
+                                {399 * quantity}
+                            </span>
+                        </div>
                     </div>
 
                     {/* share and save towishlist feature */}

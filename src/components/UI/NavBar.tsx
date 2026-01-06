@@ -1,12 +1,11 @@
 import { Bell, Gift, Heart, Search, ShoppingCart, User } from "lucide-react";
 import { Button } from "./Button";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
 
     const navigate = useNavigate();
-    const location = useLocation();
-    const pathname = location.pathname;
+
 
     return (
         <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] flex items-center gap-5">
@@ -51,7 +50,7 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
                     <User />
                 </Button>
                 {/* cart */}
-                <Button variant="nav">
+                <Button variant="nav" onClick={()=>{navigate('/cart')}}>
                     <ShoppingCart />
                 </Button>
             </div>

@@ -2,8 +2,12 @@ import React from "react";
 import ProductCard from "../components/UI/ProductCard";
 import { Button } from "../components/UI/Button";
 import { ShoppingBag, ShoppingCart } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const WishlistPage = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="h-full">
             {/* headerPart */}
@@ -13,11 +17,11 @@ export const WishlistPage = () => {
                     <p className="">7 Items saved for later</p>
                 </div>
                 <div className="flex items-center justify-center gap-4">
-                    <Button variant="outline" className="rounded-full! py-1! ">
+                    <Button variant="outline" className="rounded-full! py-1! hover:text-gray-700! hover:bg-gray-200! !hover:brightness-100">
                         <span>Continue Shopping</span>
                         <span className="flex justify-center items-center"><ShoppingBag size={20} strokeWidth={2} /></span>
                     </Button>
-                    <Button variant="primary" className="rounded-full! py-1! flex items-center gap-5 justify-between">
+                    <Button variant="primary" className="rounded-full! py-1! flex items-center gap-5 justify-between" onClick={() => { navigate('/cart') }}>
                         <span>View Cart</span>
                         <span className="flex justify-center items-center"><ShoppingCart size={20} strokeWidth={2} /></span>
                     </Button>

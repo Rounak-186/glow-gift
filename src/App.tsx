@@ -4,6 +4,7 @@ import Layout from './pages/Layout'
 import Home from './pages/Home'
 import Test from './pages/Test'
 import { WishlistPage } from './pages/Wishlist'
+import { Cart } from './pages/Cart'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/testing' element={<Test />} />
           <Route path='/wishlist' element={<WishlistPage />} />
+          <Route path='/cart' element={<Cart />} />
         </Route>
       </Routes>
     </>

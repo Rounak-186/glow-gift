@@ -57,9 +57,9 @@ function Input({ id, name, className, type = "text", placeholder, value, onChang
       <label
         htmlFor={uid}
         className={clsx(
-          'absolute ml-3 text-[1em] transition-all duration-200 cursor-text text-[var(--muted-foreground)]',
+          'absolute ml-3 text-[1em] transition-all duration-200 cursor-text text-gray-400',
           placeHolderClass,
-          (isFocused || input) && "text-[0.8em] -translate-y-6 bg-[var(--card)] px-2 text-[var(--primary)] ml-3"
+          (isFocused || input) && "text-[0.8em] -translate-y-4 bg-white px-2 text-[var(--primary)]! ml-3"
         )}
       >
         {placeholder}
@@ -72,7 +72,7 @@ function Input({ id, name, className, type = "text", placeholder, value, onChang
         onChange={handleChange}
         className={clsx(
           "file:text-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-border flex h-12 w-full min-w-0 rounded-md border px-3 py-1 bg-input-background transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-          "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+          "focus-visible:border-[var(--primary)] focus-visible:ring-[var(--primary)]/50 focus-visible:ring-[3px]",
           "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
           className,
         )}
