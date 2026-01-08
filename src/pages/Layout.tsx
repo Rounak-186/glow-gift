@@ -25,11 +25,16 @@ export default function Layout() {
     ]
 
     return (
-        <div>
+        <div className="min-h-screen flex flex-col">
             <NavBar navOpts={navOpts} />
 
-            <Outlet />
-            <Footer />
+            {/* Page content */}
+            <main className="flex-1">
+                <Outlet />
+            </main>
+
+            {/* Fixed footer */}
+            <Footer className="flex-end"/>
         </div>
     )
 }

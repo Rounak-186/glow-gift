@@ -2,13 +2,14 @@ import { Gift, Instagram, Mail, Phone, Youtube } from "lucide-react"
 import { Button } from "./Button"
 import { Input } from "./Input"
 import { useNavigate } from "react-router-dom"
+import clsx from "clsx"
 
-export const Footer = () => {
+export const Footer = ({className}:{className:string}) => {
 
     const navigate = useNavigate()
 
     return (
-        <div className="bg-[#48373c] text-white w-full">
+        <div className={clsx("bg-[#48373c] text-white w-full ",className)}>
             {/* Subscribe option */}
             <div className="border-gray-600 border-b flex justify-between px-5 py-3">
                 <div className="text-left">

@@ -18,7 +18,6 @@ export const Dropdown = ({ children, open, onClose, className }: DropdownProps) 
     useEffect(() => {
         let timeout: ReturnType<typeof setTimeout>;
         if (open) {
-            console.log("Dropdown should be visible")
             setIsOpen(true)
         }
         else {
@@ -53,7 +52,7 @@ export const Dropdown = ({ children, open, onClose, className }: DropdownProps) 
     }
 
     return (
-        <div ref={ref} className={clsx("absolute top-2 right-2 text-cyan-400 border w-50 h-25 border-[var(--secondary)] rounded-lg z-50", className)}>
+        <div ref={ref} className={clsx("absolute top-15 right-2 text-cyan-400 border w-60  border-[var(--secondary)] rounded-lg z-50 dropdown-open-anim overflow-hidden", className, isClose && "dropdown-close-anim")}>
             {children}
         </div>
     )

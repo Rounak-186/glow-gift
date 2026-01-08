@@ -1,9 +1,9 @@
 #root {
-  
+
   text-align: center;
   --primary: #ff4d75;
   --accent: #5675a3;
-  --secondary:#f0c48d;
+  --secondary: #f0c48d;
 }
 
 .logo {
@@ -43,4 +43,38 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Animation */
+
+.dropdown-open-anim {
+  animation: dropDwonOpenAnim 0.3s 1;
+}
+
+@keyframes dropDwonOpenAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-close-anim {
+  animation: dropDwonCloseAnim 0.3s ease-in-out 1;
+}
+
+@keyframes dropDwonCloseAnim {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 }

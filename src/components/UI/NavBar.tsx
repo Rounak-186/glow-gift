@@ -1,16 +1,20 @@
 import { Bell, Gift, Heart, Search, ShoppingCart, User } from "lucide-react";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import ProfileDropDown from "./ProfileDropDown";
 
 export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
 
     const navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false)
+
 
 
     return (
         <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] flex items-center gap-5">
             {/* Logo and Name */}
-            <div className="flex gap-2 justify-center items-center" onClick={()=>navigate('/home')}>
+            <div className="flex gap-2 justify-center items-center" onClick={() => navigate('/home')}>
                 <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] p-2 text-white font-bold w-12 h-12 rounded-md flex justify-center items-center">
                     <Gift />
                 </div>
@@ -38,18 +42,19 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
             {/* other options */}
             <div className="flex items-center justify-center gap-2">
                 {/* wishlist */}
-                <Button variant="nav" onClick={()=>{navigate('/wishlist')}}>
+                <Button variant="nav" onClick={() => { navigate('/wishlist') }}>
                     <Heart />
                 </Button>
                 {/* user */}
-                <Button variant="nav">
+                <Button variant="nav" onClick={(o) => setIsOpen(!isOpen)}>
                     <User />
                 </Button>
                 {/* cart */}
-                <Button variant="nav" onClick={()=>{navigate('/cart')}}>
+                <Button variant="nav" onClick={() => { navigate('/cart') }}>
                     <ShoppingCart />
                 </Button>
             </div>
+            <ProfileDropDown open={isOpen} onClose={() => setIsOpen(false)} />
 
         </div>
     )
