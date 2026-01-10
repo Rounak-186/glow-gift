@@ -8,8 +8,8 @@ export const OrderSummary = () => {
             <h3 className="font-semibold text-gray-500 border-b border-[var(--secondary)] flex items-center justify-center text-2xl py-1">Order Summary</h3>
             <div className="p-3 space-y-2 flex-1 flex flex-col">
                 <div className="flex items-center justify-center gap-5">
-                    <Input placeholder="Have a Coupon?" placeHolderClass="text-sm!" className="p-1! h-8!" />
-                    <Button className="text-sm rounded-full! p-1! px-3!">Apply</Button>
+                    <Input placeholder="Have a Coupon?" placeHolderClass="text-sm!" className="p-1! h-8" />
+                    <Button className="text-sm rounded-full! p-1! px-5! h-10">Apply</Button>
                 </div>
                 {/* bill */}
                 <div className="flex flex-col justify-center gap-1 border-b border-gray-200 mt-5">

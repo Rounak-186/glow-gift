@@ -59,7 +59,7 @@ function Input({ id, name, className, type = "text", placeholder, value, onChang
         className={clsx(
           'absolute ml-3 text-[1em] transition-all duration-200 cursor-text text-gray-400',
           placeHolderClass,
-          (isFocused || input) && "text-[0.8em] -translate-y-4 bg-white px-2 text-[var(--primary)]! ml-3"
+          (isFocused || input) && "text-[0.8em] -translate-y-6 bg-white px-2 text-[var(--primary)]! ml-3"
         )}
       >
         {placeholder}

@@ -31,7 +31,7 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
                     {
                         navOpts?.map((opt, i) => {
                             return (
-                                <Button key={i} variant="nav" className="hover:!text-[var(--primary)] text-lg hover:!bg-transparent" onClick={()=>{navigate('/about')}}>
+                                <Button key={i} variant="nav" className="hover:!text-[var(--primary)] text-lg hover:!bg-transparent" onClick={()=>{navigate(`/${opt.key}`)}}>
                                     {opt?.label}
                                 </Button>
                             )
