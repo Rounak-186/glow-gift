@@ -25,7 +25,7 @@ export default function Layout() {
     ]
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-[var(--background)]">
             <NavBar navOpts={navOpts} />
 
             {/* Page content */}

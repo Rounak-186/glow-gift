@@ -12,7 +12,7 @@ export const NavBar = ({ navOpts }: { navOpts?: Record<string, any>[] }) => {
 
 
     return (
-        <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] flex items-center gap-5">
+        <div className="w-full h-60px border-b-1 p-3 border-b-[var(--primary)] flex items-center gap-5 bg-white">
             {/* Logo and Name */}
             <div className="flex gap-2 justify-center items-center" onClick={() => navigate('/home')}>
                 <div className="bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] p-2 text-white font-bold w-12 h-12 rounded-md flex justify-center items-center">

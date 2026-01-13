@@ -14,7 +14,7 @@ const Contact = () => {
             </div>
             <div className='flex gap-4 w-full max-w-7xl mx-auto my-10'>
                 {/* Send us a message */}
-                <div className='p-5 rounded-lg shadow-md border border-[var(--secondary)] flex-1'>
+                <div className='p-5 rounded-lg shadow-md border border-[var(--secondary)] bg-white flex-1'>
                     <h2 className='text-3xl font-semibold text-left mb-4'>Send Us a Message</h2>
                     {/* form */}
                     <div className="space-y-3">
@@ -40,7 +40,7 @@ const Contact = () => {
                 <div className='flex flex-col gap-3 '>
                     {/* contact and email */}
                     <div className='min-w-[400px]'>
-                        <div className='flex items-center gap-7 p-3 px-6 shadow-md rounded-lg'>
+                        <div className='flex items-center gap-7 p-3 px-6 shadow-md rounded-lg bg-white mb-3'>
                             <div className='bg-linear-to-r from-[var(--primary)] to-[var(--secondary)] rounded-lg text-white p-3'>
                                 <Phone />
                             </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                                 <p className='text-gray-500'>Mon-Fri, 10 AM - 7 PM</p>
                             </div>
                         </div>
-                        <div className='flex items-center gap-7 p-3 px-6 shadow-md rounded-lg'>
+                        <div className='flex items-center gap-7 p-3 px-6 shadow-md rounded-lg bg-white'>
                             <div className='bg-linear-to-r from-[var(--primary)] to-[var(--secondary)] rounded-lg text-white p-3'>
                                 <Mail />
                             </div>

@@ -1,6 +1,7 @@
 #root {
 
   text-align: center;
+  --background:#fff5ec;
   --primary: #ff4d75;
   --accent: #5675a3;
   --secondary: #f0c48d;

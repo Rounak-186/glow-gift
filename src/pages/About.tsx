@@ -50,21 +50,21 @@ At GlowGift, we believe the best gifts aren’t just given — they’re felt.`}
                     {/* images */}
                 </div>
                 <div className='relative w-[400px] shrink-0'>
-                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[200px] h-[150px] object-cover absolute top-7 left-5 z-10 rounded-md  border-white border-3' />
-                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[300px] h-[200px] object-cover absolute top-20 right-0 z-20 rounded-md border-white border-3' />
-                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[200px] h-[120px] object-cover absolute bottom-2 left-0 z-40 rounded-md border-white border-3' />
+                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[200px] h-[150px] object-cover absolute top-7 left-5 z-10 rounded-lg  border-white border-3' />
+                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[300px] h-[200px] object-cover absolute top-20 right-0 z-20 rounded-lg border-white border-3' />
+                    <img src="https://images.unsplash.com/photo-1592903297149-37fb25202dfa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lmdHxlbnwwfHwwfHx8MA%3D%3D" className='w-[200px] h-[120px] object-cover absolute bottom-2 left-0 z-40 rounded-lg border-white border-3' />
                 </div>
             </div>
             {/* mission and vision */}
             <div className='flex items-center py-10 gap-5 mx-auto max-w-7xl'>
-                <div className="flex items-center gap-3 bg-[var(--primary)] rounded-lg p-4">
+                <div className="flex items-center gap-3 bg-[var(--primary)] rounded-xl p-4">
                     <div className='text-semibold flex flex-col items-center w-[350px]'>
                         <Target size={70} className='text-white' />
                         <p className='text-lg font-semibold mt-2'>Our Mission</p>
                     </div>
                     <p className='text-left'>To make gifting effortless and meaningful by providing a curated selection of high-quality, personalized gifts that help people celebrate life's special moments and strengthen their relationships.</p>
                 </div>
-                <div className="flex items-center gap-3 bg-[var(--secondary)] rounded-lg p-4">
+                <div className="flex items-center gap-3 bg-[var(--secondary)] rounded-xl p-4">
                     <div className='text-semibold flex flex-col items-center w-[350px]'>
                         <Sparkles size={70} className='text-white' />
                         <p className='text-lg font-semibold mt-2'>Our Vision</p>
@@ -73,7 +73,7 @@ At GlowGift, we believe the best gifts aren’t just given — they’re felt.`}
                 </div>
             </div>
             {/* our values */}
-            <div className="w-full max-w-7xl mx-auto mb-10">
+            <div className="w-full max-w-7xl mx-auto my-10">
                 <div className='mb-5'>
                     <h3 className='text-4xl font-semibold'>Our Values</h3>
                     <p>These principles guide everything we do at GiftAura</p>
@@ -95,7 +95,7 @@ At GlowGift, we believe the best gifts aren’t just given — they’re felt.`}
 };
 
 const ValueCard = ({ data }: { data: Record<string, any> }) =>
-    <div className='flex flex-col items-center gap-2 p-4 border-[var(--secondary)] border-2 rounded-lg'>
+    <div className='flex flex-col items-center gap-2 p-6 shadow-md rounded-xl bg-white'>
         <div className="bg-linear-to-r from-[var(--primary)] to-[var(--secondary)] rounded-full p-4 text-white ">
             {data.icon}
         </div>
