@@ -6,7 +6,7 @@ export default function ProductCard({ isWishlistProduct = false }: { isWishlistP
     const percentage = Math.min(Math.max(4.7 / 5 * 100, 0), 100);
 
     return (
-        <div className='rounded-lg shadow-md flex flex-col items-center overflow-hidden'>
+        <div className='rounded-lg shadow-md flex flex-col items-center overflow-hidden bg-white'>
             {/* product image */}
             <div className='w-full relative group overflow-hidden h-fit '>
                 <img

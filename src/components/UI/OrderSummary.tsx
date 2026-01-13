@@ -4,7 +4,7 @@ import { Input } from "./Input"
 
 export const OrderSummary = () => {
     return (
-        <div className="space-y-3 rounded-lg shadow-md border-[var(--secondary)] border flex flex-col min-h-80">
+        <div className="space-y-3 rounded-lg shadow-md border-[var(--secondary)] border flex flex-col min-h-80 bg-white">
             <h3 className="font-semibold text-gray-500 border-b border-[var(--secondary)] flex items-center justify-center text-2xl py-1">Order Summary</h3>
             <div className="p-3 space-y-2 flex-1 flex flex-col">
                 <div className="flex items-center justify-center gap-5">

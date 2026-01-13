@@ -7,7 +7,7 @@ export const ProductItem = () => {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <div className="border border-[var(--secondary)] rounded-xl p-4 flex items-center gap-4 w-full shadow-md">
+        <div className="border border-[var(--secondary)] rounded-xl p-4 flex items-center gap-4 w-full shadow-md !bg-white">
             {/* Product image */}
             <div className="rounded-md overflow-hidden">
                 <img

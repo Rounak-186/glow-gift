@@ -95,12 +95,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='w-full bg-linear-to-br from-(--primary) to-(--secondary) p-5 flex flex-col items-center my-8'>
-        <h1 className='font-semibold text-4xl text-white mb-4'>Join Our Journey</h1>
+      <div className='w-full bg-linear-to-br from-(--primary) to-(--secondary) p-5 flex flex-col items-center py-6 my-8'>
+        <h1 className='font-semibold text-4xl text-white mb-4'>Ready to Find the Perfect Gift?</h1>
         <p className='text-gray-600 max-w-4xl mx-auto mb-8'>
-          Be part of our mission to spread joy through thoughtful gifting. Explore our collection and create memorable moments today.
+          Browse our collection and make someone's day special
         </p>
-        <Button className='!px-5 !rounded-full'>Start Shopping <ArrowRight/></Button>
+        <Button className='!px-5 !rounded-full'>Start Shopping <ArrowRight /></Button>
       </div>
 
     </Fragment>
