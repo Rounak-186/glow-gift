@@ -1,11 +1,14 @@
 import React from 'react'
 import { Dropdown } from './DropDown'
 import { Button } from './Button'
-import { HandHelping, LogOut, Package, Settings, User } from 'lucide-react'
+import { HandHelping, LogOut, Package, Settings, Ticket, User } from 'lucide-react'
 import clsx from 'clsx'
 import { useNavigate } from 'react-router-dom'
 
 const ProfileDropDown = ({ open, onClose }: { open: boolean, onClose: () => void }) => {
+
+    const navigate = useNavigate();
+
 
     const dropdownOpts = [
         {
@@ -17,12 +20,12 @@ const ProfileDropDown = ({ open, onClose }: { open: boolean, onClose: () => void
         {
             icon: <Package />,
             label: "Orders",
-            onClick: () => { },
+            onClick: () => {navigate('/orders')},
             className:""
         },
         {
-            icon: <HandHelping />,
-            label: "Support",
+            icon: <Ticket />,
+            label: "Coupons",
             onClick: () => { },
             className:""
         },
@@ -34,7 +37,6 @@ const ProfileDropDown = ({ open, onClose }: { open: boolean, onClose: () => void
         }        
     ];
 
-    const navigate = useNavigate();
 
     return (
         <Dropdown open={open} onClose={onClose} className='flex flex-col gap-2 bg-[#37232fa8] backdrop-blur-sm'>
@@ -51,7 +53,7 @@ const ProfileDropDown = ({ open, onClose }: { open: boolean, onClose: () => void
             {
                 dropdownOpts.map((opt)=>{
                     return(
-                        <Button variant="nav" className={clsx("flex items-center  p-2! text-white! rounded-md!",opt.className)}>
+                        <Button variant="nav" className={clsx("flex items-center  p-2! text-white! rounded-md!",opt.className)} onClick={opt.onClick}>
                             {opt.icon}
                             {opt.label}
                         </Button>
