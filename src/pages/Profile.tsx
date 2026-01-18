@@ -1,6 +1,8 @@
 import { Camera, User } from "lucide-react";
 import { Button } from "../components/UI/Button";
 import OrderDelivered from "../components/UI/OrderDelivered";
+import OrderCancelled from "../components/UI/OrderCancelled";
+import OrderOnWay from "../components/UI/OrderOnWay";
 
 const Profile = () => {
     return (
@@ -40,6 +42,8 @@ const Profile = () => {
                     <Button className="!rounded-full">Continue Shopping</Button>
                 </div>
                 <div className="space-y-4 ">
+                    <OrderCancelled />
+                    <OrderOnWay />
                     {
                         Array(3).fill(null).map(() => {
                             return (

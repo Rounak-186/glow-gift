@@ -20,17 +20,17 @@ export const OrderOnWay = () => {
                 </div>
 
                 <div className="flex justify-between items-center bg-gray-200 p-1 px-2 rounded-sm">
-                    <div className="grid grid-cols-3 gap-2  min-w-[300px]">
+                    <div className="grid grid-cols-4 gap-2  min-w-[300px]">
                         <span className="font-semibold text-left">Order Id</span>
                         <span className="col-span-2 text-right">yadIUgohasvzoifciph</span>
-                        <div></div>
+                        <span></span>
                         <span className="font-semibold text-left">Tracking Id</span>
                         <span className="col-span-2 text-right">uiaufysgiudofds</span>
                         <span className="flex items-center justify-start pl-2 cursor-pointer"><Copy size={15} /></span>
                     </div>
                     {/* invoice */}
                     <div>
-                        <Button>View Invoice</Button>
+                        <Button>Track Order</Button>
                     </div>
                 </div>
             </div>
