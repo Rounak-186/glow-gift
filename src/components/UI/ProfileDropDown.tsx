@@ -26,7 +26,7 @@ const ProfileDropDown = ({ open, onClose }: { open: boolean, onClose: () => void
         {
             icon: <Ticket />,
             label: "Coupons",
-            onClick: () => { },
+            onClick: () => {navigate('/coupons') },
             className:""
         },
         {

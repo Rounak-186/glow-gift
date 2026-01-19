@@ -29,12 +29,14 @@ export default function Layout() {
             <NavBar navOpts={navOpts} />
 
             {/* Page content */}
-            <main className="flex-1">
-                <Outlet />
+            <main className="flex-1 flex">
+                <div className="flex-1 relative">
+                    <Outlet />
+                </div>
             </main>
 
             {/* Fixed footer */}
-            <Footer className="flex-end"/>
+            <Footer className="flex-end" />
         </div>
     )
 }

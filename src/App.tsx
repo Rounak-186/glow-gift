@@ -9,6 +9,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Profile from './pages/Profile'
 import OrderPage from './pages/Order'
+import CouponsPage from './pages/Coupons'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/orders' element={<OrderPage />} />
+          <Route path='/coupons' element={<CouponsPage />} />
 
         </Route>
       </Routes>
